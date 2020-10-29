@@ -30,10 +30,10 @@ issue #17][vcam#17].
 
 ## Build
 
-- Install QT
+- Install deps
 
 ```
-sudo apt install qtbase5-dev
+sudo apt install qtbase5-dev libobs-dev
 ```
 
 - Get obs-studio source code
@@ -52,3 +52,6 @@ cmake -DLIBOBS_INCLUDE_DIR="../../obs-studio/libobs" -DCMAKE_INSTALL_PREFIX=/usr
 make -j4
 sudo make install
 ```
+
+Then, for PopOS, with OBS installed using flatpak, you need to copy the
+resulting .so to the flatpak location and fix the symlink for flatpak.
